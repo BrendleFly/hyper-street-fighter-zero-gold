@@ -1,0 +1,80 @@
+VA 0025A3A0
+GCC /home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc -O1
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+typedef signed char s8; typedef signed short s16; typedef signed int s32;
+void func_0025A3A0(void)
+{
+    signed char v;
+    *(volatile unsigned int *)0x70001158 = 0;
+    v = *(volatile signed char *)(*(volatile unsigned int *)0x70001118 + 0x34);
+    *(volatile unsigned long *)0x70001150 = v;
+    if (*(volatile unsigned int *)0x70001150) {
+        *(volatile signed char *)(*(volatile unsigned int *)0x70001118 + 0xb) = 0;
+    }
+}
+---
+VA 0025A3A0
+GCC /home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc -O2
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+typedef signed char s8; typedef signed short s16; typedef signed int s32;
+void func_0025A3A0(void)
+{
+    signed char v;
+    *(volatile unsigned int *)0x70001158 = 0;
+    v = *(volatile signed char *)(*(volatile unsigned int *)0x70001118 + 0x34);
+    *(volatile unsigned long *)0x70001150 = v;
+    if (*(volatile unsigned int *)0x70001150) {
+        *(volatile signed char *)(*(volatile unsigned int *)0x70001118 + 0xb) = 0;
+    }
+}
+---
+VA 0025A3A0
+GCC /home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc -O1
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+typedef signed char s8; typedef signed short s16; typedef signed int s32;
+void func_0025A3A0(void)
+{
+    signed char v;
+    *(volatile unsigned int *)0x70001158 = 0;
+    v = *(volatile signed char *)(*(volatile unsigned int *)0x70001118 + 0x34);
+    *(volatile unsigned int *)0x70001150 = v;
+    if (*(volatile unsigned int *)0x70001150) {
+        *(volatile signed char *)(*(volatile unsigned int *)0x70001118 + 0xb) = 0;
+    }
+}
+---
+VA 0025A3A0
+GCC /home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc -O1 -mlong64
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+typedef signed char s8; typedef signed short s16; typedef signed int s32;
+void func_0025A3A0(void)
+{
+    signed char v;
+    *(volatile unsigned int *)0x70001158 = 0;
+    v = *(volatile signed char *)(*(volatile unsigned int *)0x70001118 + 0x34);
+    *(volatile unsigned int *)0x70001150 = v;
+    if (*(volatile unsigned int *)0x70001150) {
+        *(volatile signed char *)(*(volatile unsigned int *)0x70001118 + 0xb) = 0;
+    }
+}
+---
+VA 0025A3A0
+GCC /home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc -O2 -mlong64
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+typedef signed char s8; typedef signed short s16; typedef signed int s32;
+void func_0025A3A0(void)
+{
+    signed char v;
+    *(volatile unsigned int *)0x70001158 = 0;
+    v = *(volatile signed char *)(*(volatile unsigned int *)0x70001118 + 0x34);
+    *(volatile unsigned int *)0x70001150 = v;
+    if (*(volatile unsigned int *)0x70001150) {
+        *(volatile signed char *)(*(volatile unsigned int *)0x70001118 + 0xb) = 0;
+    }
+}
+---

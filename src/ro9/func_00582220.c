@@ -1,0 +1,41 @@
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+extern void func_005823B0();
+extern void func_005822A0();
+void func_00582220(void)
+{
+    u32 a;
+    u32 v1;
+    u32 v2;
+    u32 v3;
+    u32 v4;
+    u32 v5;
+    u32 v6;
+    u32 v7;
+    a = 0x70000000;
+    v1 = *(volatile u32 *)(a + 4368);
+    *(volatile s8 *)(v1 + 4) = *(volatile s8 *)(v1 + 4) + 2;
+    a = 0x70000000;
+    *(volatile u32 *)(a + 4388) = 0;
+    a = 0x70000000;
+    v2 = *(volatile u32 *)(a + 4388);
+    a = 0x70000000;
+    v3 = *(volatile u32 *)(a + 4368);
+    *(volatile u32 *)(v3 + 8) = v2;
+    a = 0x70000000;
+    v4 = *(volatile u32 *)(a + 4388);
+    a = 0x70000000;
+    v5 = *(volatile u32 *)(a + 4368);
+    *(volatile u32 *)(v5 + 24) = v4;
+    a = 0x70000000;
+    v6 = *(volatile u32 *)(a + 4388);
+    a = 0x70000000;
+    v7 = *(volatile u32 *)(a + 4368);
+    *(volatile u32 *)(v7 + 28) = v6;
+    func_005823B0();
+    func_005822A0();
+}

@@ -1,0 +1,67 @@
+=== cand 1: func_0025A3A0 [/home/user/sfzfg/compilers/ee-gcc2.9-990721/bin/ee-gcc ['-O1', '-fsigned-char']] -> NO (46 bytes differ, 60B vs 80B)
+    * lw $v1, 0x1118($v1)                  | lui $v1, 0x7000
+    * lbu $v0, 0x34($v1)                   | lw $v1, 0x1118($v1)
+    * dsll32 $v0, $v0, 0x18                | lb $v1, 0x34($v1)
+    * lui $v1, 0x7000                      | dsll32 $a0, $v1, 0x18
+    * dsra32 $v0, $v0, 0x18                | dsra32 $a0, $a0, 0x18
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * lw $v0, 0x1150($v1)                  | sw $a0, 0x1150($v1)
+    * beqz $v0, 0x25a3d4                   | lui $v1, 0x7000
+    * nop                                  | lw $v1, 0x1150($v1)
+    * lw $v1, 0x1118($v1)                  | beqz $v1, 0x25a3e0
+=== cand 2: func_0025A3A0 [/home/user/sfzfg/compilers/ee-gcc2.9-990721/bin/ee-gcc ['-O2', '-fsigned-char']] -> NO (49 bytes differ, 64B vs 80B)
+    * lw $v1, 0x1118($v1)                  | lui $v1, 0x7000
+    * lbu $v0, 0x34($v1)                   | lw $v1, 0x1118($v1)
+    * lui $v1, 0x7000                      | lb $v1, 0x34($v1)
+    * dsll32 $v0, $v0, 0x18                | dsll32 $a0, $v1, 0x18
+    * dsra32 $v0, $v0, 0x18                | dsra32 $a0, $a0, 0x18
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * lw $v1, 0x1150($v1)                  | sw $a0, 0x1150($v1)
+    * beqz $v1, 0x25a3d8                   | lui $v1, 0x7000
+    * nop                                  | lw $v1, 0x1150($v1)
+    * lui $v1, 0x7000                      | beqz $v1, 0x25a3e0
+=== cand 3: func_0025A3A0 [/home/user/sfzfg/compilers/ee-gcc2.9-991111-01/bin/ee-gcc ['-O1', '-fsigned-char']] -> NO (46 bytes differ, 60B vs 80B)
+    * lw $v1, 0x1118($v1)                  | lui $v1, 0x7000
+    * lbu $v0, 0x34($v1)                   | lw $v1, 0x1118($v1)
+    * dsll32 $v0, $v0, 0x18                | lb $v1, 0x34($v1)
+    * lui $v1, 0x7000                      | dsll32 $a0, $v1, 0x18
+    * dsra32 $v0, $v0, 0x18                | dsra32 $a0, $a0, 0x18
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * lw $v0, 0x1150($v1)                  | sw $a0, 0x1150($v1)
+    * beqz $v0, 0x25a3d4                   | lui $v1, 0x7000
+    * nop                                  | lw $v1, 0x1150($v1)
+    * lw $v1, 0x1118($v1)                  | beqz $v1, 0x25a3e0
+=== cand 4: func_0025A3A0 [/home/user/sfzfg/compilers/ee-gcc2.9-991111-01/bin/ee-gcc ['-O2', '-fsigned-char']] -> NO (49 bytes differ, 64B vs 80B)
+    * lw $v1, 0x1118($v1)                  | lui $v1, 0x7000
+    * lbu $v0, 0x34($v1)                   | lw $v1, 0x1118($v1)
+    * lui $v1, 0x7000                      | lb $v1, 0x34($v1)
+    * dsll32 $v0, $v0, 0x18                | dsll32 $a0, $v1, 0x18
+    * dsra32 $v0, $v0, 0x18                | dsra32 $a0, $a0, 0x18
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * lw $v1, 0x1150($v1)                  | sw $a0, 0x1150($v1)
+    * beqz $v1, 0x25a3d8                   | lui $v1, 0x7000
+    * nop                                  | lw $v1, 0x1150($v1)
+    * lui $v1, 0x7000                      | beqz $v1, 0x25a3e0
+=== cand 5: func_0025A3A0 [/home/user/sfzfg/compilers/ee-gcc2.9-991111-01-dtls13010/bin/ee-gcc ['-O1', '-fsigned-char']] -> NO (46 bytes differ, 60B vs 80B)
+    * lw $v1, 0x1118($v1)                  | lui $v1, 0x7000
+    * lbu $v0, 0x34($v1)                   | lw $v1, 0x1118($v1)
+    * dsll32 $v0, $v0, 0x18                | lb $v1, 0x34($v1)
+    * lui $v1, 0x7000                      | dsll32 $a0, $v1, 0x18
+    * dsra32 $v0, $v0, 0x18                | dsra32 $a0, $a0, 0x18
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * lw $v0, 0x1150($v1)                  | sw $a0, 0x1150($v1)
+    * beqz $v0, 0x25a3d4                   | lui $v1, 0x7000
+    * nop                                  | lw $v1, 0x1150($v1)
+    * lw $v1, 0x1118($v1)                  | beqz $v1, 0x25a3e0
+=== cand 6: func_0025A3A0 [/home/user/sfzfg/compilers/ee-gcc2.9-991111-01-dtls13010/bin/ee-gcc ['-O2', '-fsigned-char']] -> NO (49 bytes differ, 64B vs 80B)
+    * lw $v1, 0x1118($v1)                  | lui $v1, 0x7000
+    * lbu $v0, 0x34($v1)                   | lw $v1, 0x1118($v1)
+    * lui $v1, 0x7000                      | lb $v1, 0x34($v1)
+    * dsll32 $v0, $v0, 0x18                | dsll32 $a0, $v1, 0x18
+    * dsra32 $v0, $v0, 0x18                | dsra32 $a0, $a0, 0x18
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * lw $v1, 0x1150($v1)                  | sw $a0, 0x1150($v1)
+    * beqz $v1, 0x25a3d8                   | lui $v1, 0x7000
+    * nop                                  | lw $v1, 0x1150($v1)
+    * lui $v1, 0x7000                      | beqz $v1, 0x25a3e0
+done: 6 candidates

@@ -1,0 +1,148 @@
+VA 0021C2B0
+SIZE F0
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_0021C2B0(volatile int a, volatile int b, volatile int c)
+{
+    u32 r;
+    r = 0;
+    if (c & 1) {
+        r = r | *(volatile u16 *)0x19E6B0;
+        r = r | *(volatile u16 *)0x19E6B4;
+    }
+    if (c & 2) {
+        r = r | *(volatile u16 *)0x19E70C;
+        r = r | *(volatile u16 *)0x19E710;
+    }
+    if (r & 0x1000) {
+        a = a - 1;
+    }
+    if (r & 0x4000) {
+        a = a + 1;
+    }
+    if (a < 0) {
+        a = b - 1;
+    }
+    if (!(a < b)) {
+        a = 0;
+    }
+}
+---
+VA 0021C2B0
+SIZE F0
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_0021C2B0(volatile int a, volatile int b, volatile int c)
+{
+    u32 r;
+    r = 0;
+    if (c & 1) {
+        r = r | *(volatile u16 *)0x19E6B0;
+        r = r | *(volatile u16 *)0x19E6B4;
+    }
+    if (c & 2) {
+        r = r | *(volatile u16 *)0x19E70C;
+        r = r | *(volatile u16 *)0x19E710;
+    }
+    if (r & 0x1000) {
+        a = a - 1;
+    }
+    if (r & 0x4000) {
+        a = a + 1;
+    }
+    if (a < 0) {
+        a = b - 1;
+    }
+    if (!(a < b)) {
+        a = 0;
+    }
+    (void)a;
+}
+---
+VA 0021C2B0
+SIZE F0
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_0021C2B0(a, b, c)
+volatile int a;
+volatile int b;
+volatile int c;
+{
+    u32 r;
+    r = 0;
+    if (c & 1) {
+        r = r | *(volatile u16 *)0x19E6B0;
+        r = r | *(volatile u16 *)0x19E6B4;
+    }
+    if (c & 2) {
+        r = r | *(volatile u16 *)0x19E70C;
+        r = r | *(volatile u16 *)0x19E710;
+    }
+    if (r & 0x1000) {
+        a = a - 1;
+    }
+    if (r & 0x4000) {
+        a = a + 1;
+    }
+    if (a < 0) {
+        a = b - 1;
+    }
+    if (!(a < b)) {
+        a = 0;
+    }
+}
+---
+VA 0021C2B0
+SIZE F0
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_0021C2B0(volatile int a, volatile int b, volatile int c)
+{
+    u32 r;
+    r = 0;
+    if ((c & 1) != 0) {
+        r = r | *(volatile u16 *)0x19E6B0;
+        r = r | *(volatile u16 *)0x19E6B4;
+    }
+    if ((c & 2) != 0) {
+        r = r | *(volatile u16 *)0x19E70C;
+        r = r | *(volatile u16 *)0x19E710;
+    }
+    if ((r & 0x1000) != 0) {
+        a = a - 1;
+    }
+    if ((r & 0x4000) != 0) {
+        a = a + 1;
+    }
+    if (a < 0) {
+        a = b - 1;
+    }
+    if (!(a < b)) {
+        a = 0;
+    }
+}
+---

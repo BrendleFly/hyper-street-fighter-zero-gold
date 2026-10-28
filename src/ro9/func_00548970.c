@@ -1,0 +1,51 @@
+typedef signed char s8;
+typedef unsigned char u8;
+typedef signed short s16;
+typedef unsigned short u16;
+typedef unsigned int u32;
+
+void func_00548970(void)
+{
+    u32 a, v;
+    volatile s8 v;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1110);
+    v = *(volatile s8 *)(a + 0xb);
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    *(volatile u8 *)(a + 0xb) = v;
+    v = 0x1;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    *(volatile u8 *)(a + 0x30) = v;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1110);
+    v = *(volatile u32 *)(a + 0x18);
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    *(volatile u32 *)(a + 0x18) = v;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1110);
+    v = *(volatile s16 *)(a + 0xc);
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    *(volatile u16 *)(a + 0xc) = v;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1110);
+    v = *(volatile s8 *)(a + 0xb);
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    *(volatile u8 *)(a + 0xb) = v;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1110);
+    v = *(volatile s8 *)(a + 0xe);
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    *(volatile u8 *)(a + 0xe) = v;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1110);
+    v = *(volatile s16 *)(a + 0x26);
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    *(volatile u16 *)(a + 0x26) = v;
+}

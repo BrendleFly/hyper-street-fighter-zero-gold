@@ -1,0 +1,256 @@
+VA 0025A3A0
+GCC /home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc -O2 -fsigned-char
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+typedef int i8q __attribute__((mode(QI)));
+void func_0025A3A0(void)
+{
+    unsigned int a;
+    long long v;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    v = *(volatile i8q *)(a + 0x34);
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = v;
+}
+---
+VA 0025A3A0
+GCC /home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc -O1 -fsigned-char
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+typedef int i8q __attribute__((mode(QI)));
+void func_0025A3A0(void)
+{
+    unsigned int a;
+    long long v;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    v = *(volatile i8q *)(a + 0x34);
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = v;
+}
+---
+VA 0025A3A0
+GCC /home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc -O2 -fsigned-char
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+typedef int i8q __attribute__((mode(QI)));
+void func_0025A3A0(void)
+{
+    unsigned int a;
+    long long v;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    v = (long long)*(volatile i8q *)(a + 0x34);
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = v;
+}
+---
+VA 0025A3A0
+GCC /home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc -O1 -fsigned-char
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+typedef int i8q __attribute__((mode(QI)));
+void func_0025A3A0(void)
+{
+    unsigned int a;
+    long long v;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    v = (long long)*(volatile i8q *)(a + 0x34);
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = v;
+}
+---
+VA 0025A3A0
+GCC /home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc -O2 -fsigned-char
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+typedef int i8q __attribute__((mode(QI)));
+void func_0025A3A0(void)
+{
+    unsigned int a;
+    long long v;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    { i8q c; c = *(volatile i8q *)(a + 0x34); v = c; }
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = v;
+}
+---
+VA 0025A3A0
+GCC /home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc -O1 -fsigned-char
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+typedef int i8q __attribute__((mode(QI)));
+void func_0025A3A0(void)
+{
+    unsigned int a;
+    long long v;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    { i8q c; c = *(volatile i8q *)(a + 0x34); v = c; }
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = v;
+}
+---
+VA 0025A3A0
+GCC /home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc -O2 -fsigned-char
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+typedef int i8q __attribute__((mode(QI)));
+void func_0025A3A0(void)
+{
+    unsigned int a;
+    long long v;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    { char c; c = *(volatile char *)(a + 0x34); v = (long long)c; }
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = v;
+}
+---
+VA 0025A3A0
+GCC /home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc -O1 -fsigned-char
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+typedef int i8q __attribute__((mode(QI)));
+void func_0025A3A0(void)
+{
+    unsigned int a;
+    long long v;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    { char c; c = *(volatile char *)(a + 0x34); v = (long long)c; }
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = v;
+}
+---
+VA 0025A3A0
+GCC /home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc -O2 -fsigned-char
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+typedef int i8q __attribute__((mode(QI)));
+void func_0025A3A0(void)
+{
+    unsigned int a;
+    long long v;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    { signed char c; c = *(volatile signed char *)(a + 0x34); v = c; v = v + 0; }
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = v;
+}
+---
+VA 0025A3A0
+GCC /home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc -O1 -fsigned-char
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+typedef int i8q __attribute__((mode(QI)));
+void func_0025A3A0(void)
+{
+    unsigned int a;
+    long long v;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    { signed char c; c = *(volatile signed char *)(a + 0x34); v = c; v = v + 0; }
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = v;
+}
+---
+VA 0025A3A0
+GCC /home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc -O2 -fsigned-char
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+typedef int i8q __attribute__((mode(QI)));
+void func_0025A3A0(void)
+{
+    unsigned int a;
+    long long v;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    v = ((long long)*(volatile char *)(a + 0x34) << 56) >> 56;
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = v;
+}
+---
+VA 0025A3A0
+GCC /home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc -O1 -fsigned-char
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+typedef int i8q __attribute__((mode(QI)));
+void func_0025A3A0(void)
+{
+    unsigned int a;
+    long long v;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    v = ((long long)*(volatile char *)(a + 0x34) << 56) >> 56;
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = v;
+}
+---
+VA 0025A3A0
+GCC /home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc -O2 -fsigned-char
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+typedef int i8q __attribute__((mode(QI)));
+void func_0025A3A0(void)
+{
+    unsigned int a;
+    long long v;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    { i8q c; c = *(volatile i8q *)(a + 0x34); v = (long long)c; }
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = v;
+}
+---
+VA 0025A3A0
+GCC /home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc -O1 -fsigned-char
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+typedef int i8q __attribute__((mode(QI)));
+void func_0025A3A0(void)
+{
+    unsigned int a;
+    long long v;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    { i8q c; c = *(volatile i8q *)(a + 0x34); v = (long long)c; }
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = v;
+}
+---
+VA 0025A3A0
+GCC /home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc -O2 -fsigned-char
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+typedef int i8q __attribute__((mode(QI)));
+void func_0025A3A0(void)
+{
+    unsigned int a;
+    long long v;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    v = *(volatile i8q *)(a + 0x34) * 1;
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = v;
+}
+---
+VA 0025A3A0
+GCC /home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc -O1 -fsigned-char
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+typedef int i8q __attribute__((mode(QI)));
+void func_0025A3A0(void)
+{
+    unsigned int a;
+    long long v;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    v = *(volatile i8q *)(a + 0x34) * 1;
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = v;
+}
+---

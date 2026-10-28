@@ -1,0 +1,92 @@
+VA 0025A3A0
+GCC /home/user/sfzfg/tools/wibo /home/user/sfzfg/compilers/ps2_compilers/ee-gcc2.95.2-274/bin/ee-gcc.exe -O1 -fsigned-char
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+void func_0025A3A0(void)
+{
+    unsigned int a;
+    long long v;
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1158) = 0;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    v = *(volatile signed char *)(a + 0x34);
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = v;
+    a = 0x70000000;
+    if (*(volatile u32 *)(a + 0x1150)) {
+        a = 0x70000000;
+        a = *(volatile u32 *)(a + 0x1118);
+        *(volatile signed char *)(a + 0xb) = 0;
+    }
+}
+---
+VA 0025A3A0
+GCC /home/user/sfzfg/tools/wibo /home/user/sfzfg/compilers/ps2_compilers/ee-gcc2.95.2-274/bin/ee-gcc.exe -O2 -fsigned-char
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+void func_0025A3A0(void)
+{
+    unsigned int a;
+    long long v;
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1158) = 0;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    v = *(volatile signed char *)(a + 0x34);
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = v;
+    a = 0x70000000;
+    if (*(volatile u32 *)(a + 0x1150)) {
+        a = 0x70000000;
+        a = *(volatile u32 *)(a + 0x1118);
+        *(volatile signed char *)(a + 0xb) = 0;
+    }
+}
+---
+VA 0025A3A0
+GCC /home/user/sfzfg/tools/wibo /home/user/sfzfg/compilers/ps2_compilers/ee-gcc2.95.3-107/bin/ee-gcc.exe -O1 -fsigned-char
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+void func_0025A3A0(void)
+{
+    unsigned int a;
+    long long v;
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1158) = 0;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    v = *(volatile signed char *)(a + 0x34);
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = v;
+    a = 0x70000000;
+    if (*(volatile u32 *)(a + 0x1150)) {
+        a = 0x70000000;
+        a = *(volatile u32 *)(a + 0x1118);
+        *(volatile signed char *)(a + 0xb) = 0;
+    }
+}
+---
+VA 0025A3A0
+GCC /home/user/sfzfg/tools/wibo /home/user/sfzfg/compilers/ps2_compilers/ee-gcc2.95.3-107/bin/ee-gcc.exe -O2 -fsigned-char
+END
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+void func_0025A3A0(void)
+{
+    unsigned int a;
+    long long v;
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1158) = 0;
+    a = 0x70000000;
+    a = *(volatile u32 *)(a + 0x1118);
+    v = *(volatile signed char *)(a + 0x34);
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = v;
+    a = 0x70000000;
+    if (*(volatile u32 *)(a + 0x1150)) {
+        a = 0x70000000;
+        a = *(volatile u32 *)(a + 0x1118);
+        *(volatile signed char *)(a + 0xb) = 0;
+    }
+}
+---

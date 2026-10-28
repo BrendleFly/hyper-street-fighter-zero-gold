@@ -1,0 +1,89 @@
+=== cand 1: func_0025A3A0 [/home/user/sfzfg/tools/wibo ['/home/user/sfzfg/compilers/ee-gcc2.95.2-273a/bin/ee-gcc.exe', '-O2']] -> NO (49 bytes differ, 64B vs 80B)
+    * lw $v1, 0x1118($v1)                  | lui $v1, 0x7000
+    * lbu $v0, 0x34($v1)                   | lw $v1, 0x1118($v1)
+    * lui $v1, 0x7000                      | lb $v1, 0x34($v1)
+    * dsll32 $v0, $v0, 0x18                | dsll32 $a0, $v1, 0x18
+    * dsra32 $v0, $v0, 0x18                | dsra32 $a0, $a0, 0x18
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * lw $v1, 0x1150($v1)                  | sw $a0, 0x1150($v1)
+    * beqz $v1, 0x25a3d8                   | lui $v1, 0x7000
+    * nop                                  | lw $v1, 0x1150($v1)
+    * lui $v1, 0x7000                      | beqz $v1, 0x25a3e0
+=== cand 2: func_0025A3A0 [/home/user/sfzfg/tools/wibo ['/home/user/sfzfg/compilers/ee-gcc2.95.2-273a/bin/ee-gcc.exe', '-O1']] -> NO (46 bytes differ, 60B vs 80B)
+    * lw $v1, 0x1118($v1)                  | lui $v1, 0x7000
+    * lbu $v0, 0x34($v1)                   | lw $v1, 0x1118($v1)
+    * dsll32 $v0, $v0, 0x18                | lb $v1, 0x34($v1)
+    * lui $v1, 0x7000                      | dsll32 $a0, $v1, 0x18
+    * dsra32 $v0, $v0, 0x18                | dsra32 $a0, $a0, 0x18
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * lw $v0, 0x1150($v1)                  | sw $a0, 0x1150($v1)
+    * beqz $v0, 0x25a3d4                   | lui $v1, 0x7000
+    * nop                                  | lw $v1, 0x1150($v1)
+    * lw $v1, 0x1118($v1)                  | beqz $v1, 0x25a3e0
+=== cand 3: func_0025A3A0 [/home/user/sfzfg/tools/wibo ['/home/user/sfzfg/compilers/ee-gcc2.95.3-114/bin/ee-gcc.exe', '-O2']] -> NO (62 bytes differ, 80B vs 80B)
+    * lui $a0, 0x7000                      | lui $v1, 0x7000
+    * sw $zero, 0x1158($a0)                | sw $zero, 0x1158($v1)
+    * lw $a0, 0x1118($a0)                  | lui $v1, 0x7000
+    * lbu $v1, 0x34($a0)                   | lw $v1, 0x1118($v1)
+    * lui $a0, 0x7000                      | lb $v1, 0x34($v1)
+    * dsll32 $v1, $v1, 0x18                | dsll32 $a0, $v1, 0x18
+    * dsra32 $a1, $v1, 0x18                | dsra32 $a0, $a0, 0x18
+    * -                                    | lui $v1, 0x7000
+    * -                                    | sw $a0, 0x1150($v1)
+    * -                                    | lui $v1, 0x7000
+=== cand 4: func_0025A3A0 [/home/user/sfzfg/tools/wibo ['/home/user/sfzfg/compilers/ee-gcc2.95.3-114/bin/ee-gcc.exe', '-O1']] -> NO (58 bytes differ, 76B vs 80B)
+    * lui $a0, 0x7000                      | lui $v1, 0x7000
+    * sw $zero, 0x1158($a0)                | sw $zero, 0x1158($v1)
+    * lw $a0, 0x1118($a0)                  | lui $v1, 0x7000
+    * lbu $v0, 0x34($a0)                   | lw $v1, 0x1118($v1)
+    * dsll32 $v0, $v0, 0x18                | lb $v1, 0x34($v1)
+    * dsra32 $a0, $v0, 0x18                | dsll32 $a0, $v1, 0x18
+    * -                                    | dsra32 $a0, $a0, 0x18
+    * -                                    | lui $v1, 0x7000
+    * -                                    | sw $a0, 0x1150($v1)
+    * -                                    | lui $v1, 0x7000
+=== cand 5: func_0025A3A0 [/home/user/sfzfg/tools/wibo ['/home/user/sfzfg/compilers/ee-gcc2.95.3-136/bin/ee-gcc.exe', '-O2']] -> NO (62 bytes differ, 80B vs 80B)
+    * lui $a0, 0x7000                      | lui $v1, 0x7000
+    * sw $zero, 0x1158($a0)                | sw $zero, 0x1158($v1)
+    * lw $a0, 0x1118($a0)                  | lui $v1, 0x7000
+    * lbu $v1, 0x34($a0)                   | lw $v1, 0x1118($v1)
+    * lui $a0, 0x7000                      | lb $v1, 0x34($v1)
+    * dsll32 $v1, $v1, 0x18                | dsll32 $a0, $v1, 0x18
+    * dsra32 $a1, $v1, 0x18                | dsra32 $a0, $a0, 0x18
+    * -                                    | lui $v1, 0x7000
+    * -                                    | sw $a0, 0x1150($v1)
+    * -                                    | lui $v1, 0x7000
+=== cand 6: func_0025A3A0 [/home/user/sfzfg/tools/wibo ['/home/user/sfzfg/compilers/ee-gcc2.95.3-136/bin/ee-gcc.exe', '-O1']] -> NO (58 bytes differ, 76B vs 80B)
+    * lui $a0, 0x7000                      | lui $v1, 0x7000
+    * sw $zero, 0x1158($a0)                | sw $zero, 0x1158($v1)
+    * lw $a0, 0x1118($a0)                  | lui $v1, 0x7000
+    * lbu $v0, 0x34($a0)                   | lw $v1, 0x1118($v1)
+    * dsll32 $v0, $v0, 0x18                | lb $v1, 0x34($v1)
+    * dsra32 $a0, $v0, 0x18                | dsll32 $a0, $v1, 0x18
+    * -                                    | dsra32 $a0, $a0, 0x18
+    * -                                    | lui $v1, 0x7000
+    * -                                    | sw $a0, 0x1150($v1)
+    * -                                    | lui $v1, 0x7000
+=== cand 7: func_0025A3A0 [/home/user/sfzfg/compilers/ee-gcc2.9-991111a/bin/ee-gcc ['-O2']] -> NO (49 bytes differ, 64B vs 80B)
+    * lw $v1, 0x1118($v1)                  | lui $v1, 0x7000
+    * lbu $v0, 0x34($v1)                   | lw $v1, 0x1118($v1)
+    * lui $v1, 0x7000                      | lb $v1, 0x34($v1)
+    * dsll32 $v0, $v0, 0x18                | dsll32 $a0, $v1, 0x18
+    * dsra32 $v0, $v0, 0x18                | dsra32 $a0, $a0, 0x18
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * lw $v1, 0x1150($v1)                  | sw $a0, 0x1150($v1)
+    * beqz $v1, 0x25a3d8                   | lui $v1, 0x7000
+    * nop                                  | lw $v1, 0x1150($v1)
+    * lui $v1, 0x7000                      | beqz $v1, 0x25a3e0
+=== cand 8: func_0025A3A0 [/home/user/sfzfg/tools/wibo ['/home/user/sfzfg/compilers/ee-gcc2.9-991111/bin/ee-gcc.exe', '-O2']] -> NO (49 bytes differ, 64B vs 80B)
+    * lw $v1, 0x1118($v1)                  | lui $v1, 0x7000
+    * lbu $v0, 0x34($v1)                   | lw $v1, 0x1118($v1)
+    * lui $v1, 0x7000                      | lb $v1, 0x34($v1)
+    * dsll32 $v0, $v0, 0x18                | dsll32 $a0, $v1, 0x18
+    * dsra32 $v0, $v0, 0x18                | dsra32 $a0, $a0, 0x18
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * lw $v1, 0x1150($v1)                  | sw $a0, 0x1150($v1)
+    * beqz $v1, 0x25a3d8                   | lui $v1, 0x7000
+    * nop                                  | lw $v1, 0x1150($v1)
+    * lui $v1, 0x7000                      | beqz $v1, 0x25a3e0
+done: 8 candidates

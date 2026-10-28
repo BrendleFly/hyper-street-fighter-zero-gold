@@ -1,0 +1,117 @@
+VA 0021C2B0
+SIZE F0
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_0021C2B0(volatile int a, volatile int b, volatile int c)
+{
+    volatile int *pa; volatile int *pb; volatile int *pc;
+    u32 r;
+    pa = &a; pb = &b; pc = &c;
+    r = 0;
+    if (c & 1) {
+        r = r | *(volatile u16 *)0x19E6B0;
+        r = r | *(volatile u16 *)0x19E6B4;
+    }
+    if (c & 2) {
+        r = r | *(volatile u16 *)0x19E70C;
+        r = r | *(volatile u16 *)0x19E710;
+    }
+    if (r & 0x1000) {
+        a = a - 1;
+    }
+    if (r & 0x4000) {
+        a = a + 1;
+    }
+    if (a < 0) {
+        a = b - 1;
+    }
+    if (!(a < b)) {
+        a = 0;
+    }
+    (void)pa; (void)pb; (void)pc;
+}
+---
+VA 0021C2B0
+SIZE F0
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_0021C2B0(int a, int b, int c)
+{
+    int *pa; int *pb; int *pc;
+    volatile int *va; volatile int *vb; volatile int *vc;
+    u32 r;
+    pa = &a; pb = &b; pc = &c;
+    va = pa; vb = pb; vc = pc;
+    r = 0;
+    if (*vc & 1) {
+        r = r | *(volatile u16 *)0x19E6B0;
+        r = r | *(volatile u16 *)0x19E6B4;
+    }
+    if (*vc & 2) {
+        r = r | *(volatile u16 *)0x19E70C;
+        r = r | *(volatile u16 *)0x19E710;
+    }
+    if (r & 0x1000) {
+        *va = *va - 1;
+    }
+    if (r & 0x4000) {
+        *va = *va + 1;
+    }
+    if (*va < 0) {
+        *va = *vb - 1;
+    }
+    if (!(*va < *vb)) {
+        *va = 0;
+    }
+    (void)pa; (void)pb; (void)pc;
+}
+---
+VA 0021C2B0
+SIZE F0
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_0021C2B0(int a, int b, int c)
+{
+    u32 r;
+    r = 0;
+    if (c & 1) {
+        r = r | *(volatile u16 *)0x19E6B0;
+        r = r | *(volatile u16 *)0x19E6B4;
+    }
+    if (c & 2) {
+        r = r | *(volatile u16 *)0x19E70C;
+        r = r | *(volatile u16 *)0x19E710;
+    }
+    if (r & 0x1000) {
+        a = a - 1;
+    }
+    if (r & 0x4000) {
+        a = a + 1;
+    }
+    if (a < 0) {
+        a = b - 1;
+    }
+    if (!(a < b)) {
+        a = 0;
+    }
+    (void)&a; (void)&b; (void)&c;
+}
+---

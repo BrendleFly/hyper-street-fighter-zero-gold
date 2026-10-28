@@ -1,0 +1,177 @@
+=== cand 1: func_0025A3A0 [/home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc ['-O2', '-fsigned-char']] -> NO (26 bytes differ, 32B vs 80B)
+    * lw $v1, 0x1118($v1)                  | sw $zero, 0x1158($v1)
+    * lbu $v0, 0x34($v1)                   | lui $v1, 0x7000
+    * lui $v1, 0x7000                      | lw $v1, 0x1118($v1)
+    * dsll32 $v0, $v0, 0x18                | lb $v1, 0x34($v1)
+    * dsra32 $v0, $v0, 0x18                | dsll32 $a0, $v1, 0x18
+    * jr $ra                               | dsra32 $a0, $a0, 0x18
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * -                                    | sw $a0, 0x1150($v1)
+    * -                                    | lui $v1, 0x7000
+    * -                                    | lw $v1, 0x1150($v1)
+=== cand 2: func_0025A3A0 [/home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc ['-O1', '-fsigned-char']] -> NO (26 bytes differ, 32B vs 80B)
+    * lw $v1, 0x1118($v1)                  | sw $zero, 0x1158($v1)
+    * lbu $v0, 0x34($v1)                   | lui $v1, 0x7000
+    * dsll32 $v0, $v0, 0x18                | lw $v1, 0x1118($v1)
+    * lui $v1, 0x7000                      | lb $v1, 0x34($v1)
+    * dsra32 $v0, $v0, 0x18                | dsll32 $a0, $v1, 0x18
+    * jr $ra                               | dsra32 $a0, $a0, 0x18
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * -                                    | sw $a0, 0x1150($v1)
+    * -                                    | lui $v1, 0x7000
+    * -                                    | lw $v1, 0x1150($v1)
+=== cand 3: func_0025A3A0 [/home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc ['-O2', '-fsigned-char']] -> NO (26 bytes differ, 32B vs 80B)
+    * lw $v1, 0x1118($v1)                  | sw $zero, 0x1158($v1)
+    * lbu $v0, 0x34($v1)                   | lui $v1, 0x7000
+    * lui $v1, 0x7000                      | lw $v1, 0x1118($v1)
+    * dsll32 $v0, $v0, 0x18                | lb $v1, 0x34($v1)
+    * dsra32 $v0, $v0, 0x18                | dsll32 $a0, $v1, 0x18
+    * jr $ra                               | dsra32 $a0, $a0, 0x18
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * -                                    | sw $a0, 0x1150($v1)
+    * -                                    | lui $v1, 0x7000
+    * -                                    | lw $v1, 0x1150($v1)
+=== cand 4: func_0025A3A0 [/home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc ['-O1', '-fsigned-char']] -> NO (26 bytes differ, 32B vs 80B)
+    * lw $v1, 0x1118($v1)                  | sw $zero, 0x1158($v1)
+    * lbu $v0, 0x34($v1)                   | lui $v1, 0x7000
+    * dsll32 $v0, $v0, 0x18                | lw $v1, 0x1118($v1)
+    * lui $v1, 0x7000                      | lb $v1, 0x34($v1)
+    * dsra32 $v0, $v0, 0x18                | dsll32 $a0, $v1, 0x18
+    * jr $ra                               | dsra32 $a0, $a0, 0x18
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * -                                    | sw $a0, 0x1150($v1)
+    * -                                    | lui $v1, 0x7000
+    * -                                    | lw $v1, 0x1150($v1)
+=== cand 5: func_0025A3A0 [/home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc ['-O2', '-fsigned-char']] -> NO (33 bytes differ, 40B vs 80B)
+    * lw $v1, 0x1118($v1)                  | sw $zero, 0x1158($v1)
+    * lbu $v0, 0x34($v1)                   | lui $v1, 0x7000
+    * lui $v1, 0x7000                      | lw $v1, 0x1118($v1)
+    * sll $v0, $v0, 0x18                   | lb $v1, 0x34($v1)
+    * sra $v0, $v0, 0x18                   | dsll32 $a0, $v1, 0x18
+    * dsll32 $v0, $v0, 0x18                | dsra32 $a0, $a0, 0x18
+    * dsra32 $v0, $v0, 0x18                | lui $v1, 0x7000
+    * jr $ra                               | sw $a0, 0x1150($v1)
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * -                                    | lw $v1, 0x1150($v1)
+=== cand 6: func_0025A3A0 [/home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc ['-O1', '-fsigned-char']] -> NO (33 bytes differ, 40B vs 80B)
+    * lw $v1, 0x1118($v1)                  | sw $zero, 0x1158($v1)
+    * lbu $v0, 0x34($v1)                   | lui $v1, 0x7000
+    * sll $v0, $v0, 0x18                   | lw $v1, 0x1118($v1)
+    * sra $v0, $v0, 0x18                   | lb $v1, 0x34($v1)
+    * dsll32 $v0, $v0, 0x18                | dsll32 $a0, $v1, 0x18
+    * lui $v1, 0x7000                      | dsra32 $a0, $a0, 0x18
+    * dsra32 $v0, $v0, 0x18                | lui $v1, 0x7000
+    * jr $ra                               | sw $a0, 0x1150($v1)
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * -                                    | lw $v1, 0x1150($v1)
+=== cand 7: func_0025A3A0 [/home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc ['-O2', '-fsigned-char']] -> NO (33 bytes differ, 40B vs 80B)
+    * lw $v1, 0x1118($v1)                  | sw $zero, 0x1158($v1)
+    * lbu $v0, 0x34($v1)                   | lui $v1, 0x7000
+    * lui $v1, 0x7000                      | lw $v1, 0x1118($v1)
+    * sll $v0, $v0, 0x18                   | lb $v1, 0x34($v1)
+    * sra $v0, $v0, 0x18                   | dsll32 $a0, $v1, 0x18
+    * dsll32 $v0, $v0, 0x18                | dsra32 $a0, $a0, 0x18
+    * dsra32 $v0, $v0, 0x18                | lui $v1, 0x7000
+    * jr $ra                               | sw $a0, 0x1150($v1)
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * -                                    | lw $v1, 0x1150($v1)
+=== cand 8: func_0025A3A0 [/home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc ['-O1', '-fsigned-char']] -> NO (33 bytes differ, 40B vs 80B)
+    * lw $v1, 0x1118($v1)                  | sw $zero, 0x1158($v1)
+    * lbu $v0, 0x34($v1)                   | lui $v1, 0x7000
+    * sll $v0, $v0, 0x18                   | lw $v1, 0x1118($v1)
+    * sra $v0, $v0, 0x18                   | lb $v1, 0x34($v1)
+    * dsll32 $v0, $v0, 0x18                | dsll32 $a0, $v1, 0x18
+    * lui $v1, 0x7000                      | dsra32 $a0, $a0, 0x18
+    * dsra32 $v0, $v0, 0x18                | lui $v1, 0x7000
+    * jr $ra                               | sw $a0, 0x1150($v1)
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * -                                    | lw $v1, 0x1150($v1)
+=== cand 9: func_0025A3A0 [/home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc ['-O2', '-fsigned-char']] -> NO (33 bytes differ, 40B vs 80B)
+    * lw $v1, 0x1118($v1)                  | sw $zero, 0x1158($v1)
+    * lbu $v0, 0x34($v1)                   | lui $v1, 0x7000
+    * lui $v1, 0x7000                      | lw $v1, 0x1118($v1)
+    * sll $v0, $v0, 0x18                   | lb $v1, 0x34($v1)
+    * sra $v0, $v0, 0x18                   | dsll32 $a0, $v1, 0x18
+    * dsll32 $v0, $v0, 0x18                | dsra32 $a0, $a0, 0x18
+    * dsra32 $v0, $v0, 0x18                | lui $v1, 0x7000
+    * jr $ra                               | sw $a0, 0x1150($v1)
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * -                                    | lw $v1, 0x1150($v1)
+=== cand 10: func_0025A3A0 [/home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc ['-O1', '-fsigned-char']] -> NO (33 bytes differ, 40B vs 80B)
+    * lw $v1, 0x1118($v1)                  | sw $zero, 0x1158($v1)
+    * lbu $v0, 0x34($v1)                   | lui $v1, 0x7000
+    * sll $v0, $v0, 0x18                   | lw $v1, 0x1118($v1)
+    * sra $v0, $v0, 0x18                   | lb $v1, 0x34($v1)
+    * dsll32 $v0, $v0, 0x18                | dsll32 $a0, $v1, 0x18
+    * lui $v1, 0x7000                      | dsra32 $a0, $a0, 0x18
+    * dsra32 $v0, $v0, 0x18                | lui $v1, 0x7000
+    * jr $ra                               | sw $a0, 0x1150($v1)
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * -                                    | lw $v1, 0x1150($v1)
+=== cand 11: func_0025A3A0 [/home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc ['-O2', '-fsigned-char']] -> NO (26 bytes differ, 32B vs 80B)
+    * lw $v1, 0x1118($v1)                  | sw $zero, 0x1158($v1)
+    * lbu $v0, 0x34($v1)                   | lui $v1, 0x7000
+    * lui $v1, 0x7000                      | lw $v1, 0x1118($v1)
+    * dsll32 $v0, $v0, 0x18                | lb $v1, 0x34($v1)
+    * dsra32 $v0, $v0, 0x18                | dsll32 $a0, $v1, 0x18
+    * jr $ra                               | dsra32 $a0, $a0, 0x18
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * -                                    | sw $a0, 0x1150($v1)
+    * -                                    | lui $v1, 0x7000
+    * -                                    | lw $v1, 0x1150($v1)
+=== cand 12: func_0025A3A0 [/home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc ['-O1', '-fsigned-char']] -> NO (26 bytes differ, 32B vs 80B)
+    * lw $v1, 0x1118($v1)                  | sw $zero, 0x1158($v1)
+    * lbu $v0, 0x34($v1)                   | lui $v1, 0x7000
+    * dsll32 $v0, $v0, 0x18                | lw $v1, 0x1118($v1)
+    * lui $v1, 0x7000                      | lb $v1, 0x34($v1)
+    * dsra32 $v0, $v0, 0x18                | dsll32 $a0, $v1, 0x18
+    * jr $ra                               | dsra32 $a0, $a0, 0x18
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * -                                    | sw $a0, 0x1150($v1)
+    * -                                    | lui $v1, 0x7000
+    * -                                    | lw $v1, 0x1150($v1)
+=== cand 13: func_0025A3A0 [/home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc ['-O2', '-fsigned-char']] -> NO (33 bytes differ, 40B vs 80B)
+    * lw $v1, 0x1118($v1)                  | sw $zero, 0x1158($v1)
+    * lbu $v0, 0x34($v1)                   | lui $v1, 0x7000
+    * lui $v1, 0x7000                      | lw $v1, 0x1118($v1)
+    * sll $v0, $v0, 0x18                   | lb $v1, 0x34($v1)
+    * sra $v0, $v0, 0x18                   | dsll32 $a0, $v1, 0x18
+    * dsll32 $v0, $v0, 0x18                | dsra32 $a0, $a0, 0x18
+    * dsra32 $v0, $v0, 0x18                | lui $v1, 0x7000
+    * jr $ra                               | sw $a0, 0x1150($v1)
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * -                                    | lw $v1, 0x1150($v1)
+=== cand 14: func_0025A3A0 [/home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc ['-O1', '-fsigned-char']] -> NO (33 bytes differ, 40B vs 80B)
+    * lw $v1, 0x1118($v1)                  | sw $zero, 0x1158($v1)
+    * lbu $v0, 0x34($v1)                   | lui $v1, 0x7000
+    * sll $v0, $v0, 0x18                   | lw $v1, 0x1118($v1)
+    * sra $v0, $v0, 0x18                   | lb $v1, 0x34($v1)
+    * dsll32 $v0, $v0, 0x18                | dsll32 $a0, $v1, 0x18
+    * lui $v1, 0x7000                      | dsra32 $a0, $a0, 0x18
+    * dsra32 $v0, $v0, 0x18                | lui $v1, 0x7000
+    * jr $ra                               | sw $a0, 0x1150($v1)
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * -                                    | lw $v1, 0x1150($v1)
+=== cand 15: func_0025A3A0 [/home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc ['-O2', '-fsigned-char']] -> NO (26 bytes differ, 32B vs 80B)
+    * lw $v1, 0x1118($v1)                  | sw $zero, 0x1158($v1)
+    * lbu $v0, 0x34($v1)                   | lui $v1, 0x7000
+    * lui $v1, 0x7000                      | lw $v1, 0x1118($v1)
+    * dsll32 $v0, $v0, 0x18                | lb $v1, 0x34($v1)
+    * dsra32 $v0, $v0, 0x18                | dsll32 $a0, $v1, 0x18
+    * jr $ra                               | dsra32 $a0, $a0, 0x18
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * -                                    | sw $a0, 0x1150($v1)
+    * -                                    | lui $v1, 0x7000
+    * -                                    | lw $v1, 0x1150($v1)
+=== cand 16: func_0025A3A0 [/home/user/sfzfg/compilers/ee-gcc2.96/bin/ee-gcc ['-O1', '-fsigned-char']] -> NO (26 bytes differ, 32B vs 80B)
+    * lw $v1, 0x1118($v1)                  | sw $zero, 0x1158($v1)
+    * lbu $v0, 0x34($v1)                   | lui $v1, 0x7000
+    * dsll32 $v0, $v0, 0x18                | lw $v1, 0x1118($v1)
+    * lui $v1, 0x7000                      | lb $v1, 0x34($v1)
+    * dsra32 $v0, $v0, 0x18                | dsll32 $a0, $v1, 0x18
+    * jr $ra                               | dsra32 $a0, $a0, 0x18
+    * sw $v0, 0x1150($v1)                  | lui $v1, 0x7000
+    * -                                    | sw $a0, 0x1150($v1)
+    * -                                    | lui $v1, 0x7000
+    * -                                    | lw $v1, 0x1150($v1)
+done: 16 candidates

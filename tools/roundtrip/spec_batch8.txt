@@ -1,0 +1,120 @@
+VA 001F4710
+SIZE 1E
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_001F4710(void)
+{
+    u32 v1;
+    void *p;
+    v1 = *(volatile u32 *)0x70001018;
+    p = (void *)(v1 + 32);
+    *(volatile s8 *)p = *(volatile s8 *)p & -2;
+}
+---
+VA 001F4710
+SIZE 1E
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_001F4710(void)
+{
+    u32 v1;
+    u32 q;
+    v1 = *(volatile u32 *)0x70001018;
+    q = v1 + 32;
+    *(volatile s8 *)(q) = *(volatile s8 *)(q) & -2;
+    *(volatile u32 *)0x70001018 = q;
+}
+---
+VA 001F4710
+SIZE 1E
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_001F4710(void)
+{
+    u32 v1;
+    u32 q;
+    u32 chain;
+    chain = *(volatile u32 *)0x70001018;
+    v1 = chain;
+    q = v1 + 32;
+    *(volatile s8 *)q = *(volatile s8 *)q & -2;
+}
+---
+VA 001F4710
+SIZE 1E
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_001F4710(void)
+{
+    u32 v1;
+    volatile u32 q;
+    v1 = *(volatile u32 *)0x70001018;
+    q = v1 + 32;
+    *(volatile s8 *)q = *(volatile s8 *)q & -2;
+    q = 0;
+}
+---
+VA 001F4710
+SIZE 1E
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_001F4710(void)
+{
+    u32 v1;
+    u32 q;
+    v1 = *(volatile u32 *)0x70001018;
+    q = v1 + 32;
+    *(volatile s8 *)q = *(volatile s8 *)q & -2;
+    v1 = v1;
+}
+---
+VA 001F4710
+SIZE 1E
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_001F4710(void)
+{
+    u32 v1;
+    u32 q;
+    v1 = *(volatile u32 *)0x70001018;
+    q = v1 + 32;
+    *(volatile s8 *)q = *(volatile s8 *)q & -2;
+    if (q) *(volatile s8 *)q = 0;
+}
+---

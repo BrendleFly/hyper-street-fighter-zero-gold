@@ -1,0 +1,13 @@
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+extern void func_004A96E0();
+extern void func_00364DE0();
+void func_00364DB0(void)
+{
+    ((void (*)(void))func_004A96E0)();
+    func_00364DE0();
+}

@@ -1,0 +1,174 @@
+VA 0025A3A0
+SIZE 50
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_0025A3A0(void)
+{
+    u32 a;
+    s8 v;
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1158) = 0;
+    a = 0x70000000;
+    v = *(volatile s8 *)(*(volatile u32 *)(a + 0x1118) + 0x34);
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = v;
+    a = 0x70000000;
+    if (*(volatile u32 *)(a + 0x1150)) {
+        a = 0x70000000;
+        *(volatile s8 *)(*(volatile u32 *)(a + 0x1118) + 0xb) = 0;
+    }
+}
+---
+VA 0025A3A0
+SIZE 50
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_0025A3A0(void)
+{
+    u32 a;
+    u32 w;
+    s8 v;
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1158) = 0;
+    a = 0x70000000;
+    v = *(volatile s8 *)(*(volatile u32 *)(a + 0x1118) + 0x34);
+    w = v;
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = w;
+    a = 0x70000000;
+    if (*(volatile u32 *)(a + 0x1150)) {
+        a = 0x70000000;
+        *(volatile s8 *)(*(volatile u32 *)(a + 0x1118) + 0xb) = 0;
+    }
+}
+---
+VA 0025A3A0
+SIZE 50
+COMP 3.0.1b210
+FLAG -Osize
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_0025A3A0(void)
+{
+    u32 a;
+    u32 w;
+    s8 v;
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1158) = 0;
+    a = 0x70000000;
+    v = *(volatile s8 *)(*(volatile u32 *)(a + 0x1118) + 0x34);
+    w = v;
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = w;
+    a = 0x70000000;
+    if (*(volatile u32 *)(a + 0x1150)) {
+        a = 0x70000000;
+        *(volatile s8 *)(*(volatile u32 *)(a + 0x1118) + 0xb) = 0;
+    }
+}
+---
+VA 0025A3A0
+SIZE 50
+COMP 3.0.1b210
+FLAG -Otime
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_0025A3A0(void)
+{
+    u32 a;
+    u32 w;
+    s8 v;
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1158) = 0;
+    a = 0x70000000;
+    v = *(volatile s8 *)(*(volatile u32 *)(a + 0x1118) + 0x34);
+    w = v;
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = w;
+    a = 0x70000000;
+    if (*(volatile u32 *)(a + 0x1150)) {
+        a = 0x70000000;
+        *(volatile s8 *)(*(volatile u32 *)(a + 0x1118) + 0xb) = 0;
+    }
+}
+---
+VA 0025A3A0
+SIZE 50
+COMP 3.0.1b210
+FLAG -Osize
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_0025A3A0(void)
+{
+    u32 a;
+    s8 v;
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1158) = 0;
+    a = 0x70000000;
+    v = *(volatile s8 *)(*(volatile u32 *)(a + 0x1118) + 0x34);
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = v;
+    a = 0x70000000;
+    if (*(volatile u32 *)(a + 0x1150)) {
+        a = 0x70000000;
+        *(volatile s8 *)(*(volatile u32 *)(a + 0x1118) + 0xb) = 0;
+    }
+}
+---
+VA 0025A3A0
+SIZE 50
+COMP 3.0.1b210
+FLAG -O0
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_0025A3A0(void)
+{
+    u32 a;
+    u32 w;
+    s8 v;
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1158) = 0;
+    a = 0x70000000;
+    v = *(volatile s8 *)(*(volatile u32 *)(a + 0x1118) + 0x34);
+    w = v;
+    a = 0x70000000;
+    *(volatile u32 *)(a + 0x1150) = w;
+    a = 0x70000000;
+    if (*(volatile u32 *)(a + 0x1150)) {
+        a = 0x70000000;
+        *(volatile s8 *)(*(volatile u32 *)(a + 0x1118) + 0xb) = 0;
+    }
+}
+---

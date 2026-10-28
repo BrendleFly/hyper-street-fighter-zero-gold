@@ -1,0 +1,167 @@
+VA 001F4710
+SIZE 1E
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_001F4710(void)
+{
+    u32 a;
+    u32 v1;
+    u8 *q;
+    a = 0x70000000;
+    v1 = *(volatile u32 *)(a + 4120);
+    q = (u8 *)v1 + 32;
+    *(volatile s8 *)q = *(volatile s8 *)q & -2;
+}
+---
+VA 001F4710
+SIZE 1E
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_001F4710(void)
+{
+    u32 v1;
+    u32 a;
+    u32 q;
+    a = 0x70000000;
+    v1 = *(volatile u32 *)(a + 4120);
+    q = v1 + 32;
+    *(volatile s8 *)q = *(volatile s8 *)q & -2;
+}
+---
+VA 001F4710
+SIZE 1E
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_001F4710(void)
+{
+    u32 q;
+    u32 v1;
+    u32 a;
+    a = 0x70000000;
+    v1 = *(volatile u32 *)(a + 4120);
+    q = v1 + 32;
+    *(volatile s8 *)q = *(volatile s8 *)q & -2;
+}
+---
+VA 001F4710
+SIZE 1E
+COMP 3.0.1b210
+FLAG -Otime
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_001F4710(void)
+{
+    u32 a;
+    u32 v1;
+    u32 q;
+    a = 0x70000000;
+    v1 = *(volatile u32 *)(a + 4120);
+    q = v1 + 32;
+    *(volatile s8 *)q = *(volatile s8 *)q & -2;
+}
+---
+VA 001F4710
+SIZE 1E
+COMP 3.0.1b210
+FLAG -O2
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_001F4710(void)
+{
+    u32 a;
+    u32 v1;
+    u32 q;
+    a = 0x70000000;
+    v1 = *(volatile u32 *)(a + 4120);
+    q = v1 + 32;
+    *(volatile s8 *)q = *(volatile s8 *)q & -2;
+}
+---
+VA 001F4710
+SIZE 1E
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+struct T { u8 pad[32]; s8 t; };
+void func_001F4710(void)
+{
+    u32 a;
+    u32 v1;
+    volatile struct T *t;
+    a = 0x70000000;
+    v1 = *(volatile u32 *)(a + 4120);
+    t = (volatile struct T *)v1;
+    t->t = t->t & -2;
+}
+---
+VA 001F4710
+SIZE 1E
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_001F4710(void)
+{
+    u32 v1;
+    u32 q;
+    v1 = *(volatile u32 *)0x70001018;
+    q = v1 + 32;
+    *(volatile s8 *)q = *(volatile s8 *)q & -2;
+}
+---
+VA 001F4710
+SIZE 1E
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_001F4710(void)
+{
+    u32 v1;
+    u32 q;
+    v1 = *(volatile u32 *)0x70001018;
+    q = v1 + 32;
+    *(volatile s8 *)q = (volatile s8)(*(volatile s8 *)q & -2);
+}
+---

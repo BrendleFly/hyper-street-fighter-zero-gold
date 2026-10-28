@@ -1,0 +1,7 @@
+
+# game data (must be extracted from your own disc; never committed)
+baserom/
+*.bin
+*.iso
+__pycache__/
+*.pyc

@@ -1,0 +1,158 @@
+VA 0021C2B0
+SIZE F0
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_0021C2B0(volatile int a, volatile int b, volatile int c)
+{
+    volatile int p1; volatile int p2; volatile int p3;
+    volatile int p4; volatile int p5; volatile int p6;
+    volatile int p7; volatile int p8; volatile int p9;
+    u32 r;
+    (void)&p1; (void)&p2; (void)&p3; (void)&p4; (void)&p5;
+    (void)&p6; (void)&p7; (void)&p8; (void)&p9;
+    r = 0;
+    if (c & 1) {
+        r = r | *(volatile u16 *)0x19E6B0;
+        r = r | *(volatile u16 *)0x19E6B4;
+    }
+    if (c & 2) {
+        r = r | *(volatile u16 *)0x19E70C;
+        r = r | *(volatile u16 *)0x19E710;
+    }
+    if (r & 0x1000) {
+        a = a - 1;
+    }
+    if (r & 0x4000) {
+        a = a + 1;
+    }
+    if (a < 0) {
+        a = b - 1;
+    }
+    if (!(a < b)) {
+        a = 0;
+    }
+}
+---
+VA 0021C2B0
+SIZE F0
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_0021C2B0(int q0, int q1, int q2, int q3, volatile int a, volatile int b, volatile int c)
+{
+    u32 r;
+    r = 0;
+    if (c & 1) {
+        r = r | *(volatile u16 *)0x19E6B0;
+        r = r | *(volatile u16 *)0x19E6B4;
+    }
+    if (c & 2) {
+        r = r | *(volatile u16 *)0x19E70C;
+        r = r | *(volatile u16 *)0x19E710;
+    }
+    if (r & 0x1000) {
+        a = a - 1;
+    }
+    if (r & 0x4000) {
+        a = a + 1;
+    }
+    if (a < 0) {
+        a = b - 1;
+    }
+    if (!(a < b)) {
+        a = 0;
+    }
+}
+---
+VA 0021C2B0
+SIZE F0
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+struct big { int x[3]; };
+void func_0021C2B0(volatile struct big a, volatile struct big b, volatile struct big c)
+{
+    u32 r;
+    r = 0;
+    if (c.x[0] & 1) {
+        r = r | *(volatile u16 *)0x19E6B0;
+        r = r | *(volatile u16 *)0x19E6B4;
+    }
+    if (c.x[0] & 2) {
+        r = r | *(volatile u16 *)0x19E70C;
+        r = r | *(volatile u16 *)0x19E710;
+    }
+    if (r & 0x1000) {
+        a.x[0] = a.x[0] - 1;
+    }
+    if (r & 0x4000) {
+        a.x[0] = a.x[0] + 1;
+    }
+    if (a.x[0] < 0) {
+        a.x[0] = b.x[0] - 1;
+    }
+    if (!(a.x[0] < b.x[0])) {
+        a.x[0] = 0;
+    }
+}
+---
+VA 0021C2B0
+SIZE F0
+COMP 3.0.1b210
+END
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+void func_0021C2B0(volatile int a, volatile int b, volatile int c)
+{
+    volatile int p1; volatile int p2; volatile int p3;
+    u32 r;
+    (void)&p1; (void)&p2; (void)&p3;
+    r = 0;
+    p1 = r;
+    if (c & 1) {
+        p2 = *(volatile u16 *)0x19E6B0;
+        r = r | p2;
+        p2 = *(volatile u16 *)0x19E6B4;
+        r = r | p2;
+    }
+    if (c & 2) {
+        p2 = *(volatile u16 *)0x19E70C;
+        r = r | p2;
+        p2 = *(volatile u16 *)0x19E710;
+        r = r | p2;
+    }
+    if (r & 0x1000) {
+        a = a - 1;
+    }
+    if (r & 0x4000) {
+        a = a + 1;
+    }
+    if (a < 0) {
+        a = b - 1;
+    }
+    if (!(a < b)) {
+        a = 0;
+    }
+    p3 = r;
+}
+---

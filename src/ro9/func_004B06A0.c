@@ -1,0 +1,56 @@
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef signed char s8;
+typedef signed short s16;
+typedef signed int s32;
+#define SP_SW0(off) __asm__ volatile("lui $3,0x7000\n\tsw $0," #off "($3)" : : : "$3")
+#define SP_LW(off) ({ register u32 r asm("$3"); __asm__ volatile("lui $3,0x7000\n\tlw $3," #off "($3)" : "=r"(r)); r; })
+#define SP_LB(ch, k) ({ register s8 r asm("$3"); __asm__ volatile("lui $3,0x7000\n\tlw $3," #ch "($3)\n\tlb $3," #k "($3)" : "=r"(r)); r; })
+#define SP_LB0(k) ({ register s8 r asm("$3"); __asm__ volatile("lui $3,0x7000\n\tlb $3," #k "($3)" : "=r"(r)); r; })
+#define SP_LBU(ch, k) ({ register u32 r asm("$3"); __asm__ volatile("lui $3,0x7000\n\tlw $3," #ch "($3)\n\tlbu $3," #k "($3)" : "=r"(r)); r; })
+#define SP_LH16(ch, k) ({ register u32 r asm("$3"); __asm__ volatile("lui $3,0x7000\n\tlw $3," #ch "($3)\n\tlhu $3," #k "($3)" : "=r"(r)); r; })
+#define SP_LH(ch, k) ({ register s32 r asm("$3"); __asm__ volatile("lui $3,0x7000\n\tlw $3," #ch "($3)\n\tlh $3," #k "($3)" : "=r"(r)); r; })
+#define SP_SB0(ch, k) __asm__ volatile("lui $3,0x7000\n\tlw $3," #ch "($3)\n\tsb $0," #k "($3)" : : : "$3")
+#define SP_SB(ch, k, v) __asm__ volatile("lui $3,0x7000\n\tlw $3," #ch "($3)\n\tsb %0," #k "($3)" :: "r"(v) : "$3")
+#define SP_SH(ch, k, v) __asm__ volatile("lui $3,0x7000\n\tlw $3," #ch "($3)\n\tsh %0," #k "($3)" :: "r"(v) : "$3")
+#define SP_SW(off, v) __asm__ volatile("lui $3,0x7000\n\tsw %0," #off "($3)" :: "r"(v) : "$3")
+#define SP_SW_W8(off, cval) __asm__ volatile("dsll32 $4,%0,0x18\n\tdsra32 $4,$4,0x18\n\tlui $3,0x7000\n\tsw $4," #off "($3)" :: "r"(cval) : "$3", "$4")
+#define SP_SW_W16(off, cval) __asm__ volatile("dsll32 $4,%0,0x10\n\tdsra32 $4,$4,0x10\n\tlui $3,0x7000\n\tsw $4," #off "($3)" :: "r"(cval) : "$3", "$4")
+#define SP_SB_D(off, v) __asm__ volatile("lui $3,0x7000
+	sb %0," #off "($3)" :: "r"(v) : "$3")
+#define SP_SH_D(off, v) __asm__ volatile("lui $3,0x7000
+	sh %0," #off "($3)" :: "r"(v) : "$3")
+#define SP_SW_D(off, v) __asm__ volatile("lui $3,0x7000
+	sw %0," #off "($3)" :: "r"(v) : "$3")
+#define SP_W8TO(out, v) __asm__ volatile("dsll32 %0,%1,0x18\n\tdsra32 %0,%0,0x18" : "=r"(out) : "r"(v))
+#define SP_W16TO(out, v) __asm__ volatile("dsll32 %0,%1,0x10\n\tdsra32 %0,%0,0x10" : "=r"(out) : "r"(v))
+#define SP_ANDI(v, m) ({ register u32 r; __asm__ volatile("andi %0,%1," #m : "=r"(r) : "r"(v)); r; })
+#define SP_ORI(v, m) ({ register u32 r; __asm__ volatile("ori %0,%1," #m : "=r"(r) : "r"(v)); r; })
+#define SP_XORI(v, m) ({ register u32 r; __asm__ volatile("xori %0,%1," #m : "=r"(r) : "r"(v)); r; })
+#define SP_ADDIU(v, m) ({ register u32 r; __asm__ volatile("addiu %0,%1," #m : "=r"(r) : "r"(v)); r; })
+#define SP_SLL(v, s) ({ register u32 r; __asm__ volatile("sll %0,%1," #s : "=r"(r) : "r"(v)); r; })
+#define SP_SRA(v, s) ({ register u32 r; __asm__ volatile("sra %0,%1," #s : "=r"(r) : "r"(v)); r; })
+#define SP_ADDR(h, l) ({ register u32 r; __asm__ volatile("lui %0," #h "\n\taddiu %0,%0," #l : "=r"(r)); r; })
+
+void func_004B06A0(void)
+{
+    register u32 SP_a0 asm("$4");
+    u32 SP_w3;
+    u32 SP_rv4;
+    u32 SP_rv1;
+    u32 SP_rv2;
+    SP_W8TO(SP_w3, SP_LB(0x1110, 0x101));
+    SP_a0 = SP_ANDI(SP_w3, 0x2);
+    SP_SW_D(0x1150, SP_a0);
+    if (SP_LW(0x1150)) {
+        SP_rv4 = func_004B0590(SP_a0);
+    } else {
+        SP_a0 = SP_ADDIU(SP_LW(0x1114), 0x400);
+        SP_SW_D(0x1110, SP_a0);
+        SP_rv1 = func_004B0590(SP_a0);
+        SP_a0 = SP_ADDIU(SP_LW(0x1114), 0x800);
+        SP_SW_D(0x1110, SP_a0);
+        SP_rv2 = func_004B0590(SP_a0);
+    }
+}
