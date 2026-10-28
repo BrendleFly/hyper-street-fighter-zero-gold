@@ -2,13 +2,6 @@
 
 Reverse-engineering the hidden game **Hyper Street Fighter Zero** that ships inside the PlayStation 2 disc *Street Fighter Zero: Fighter's Generation* (Japan). I might stop there, since I'm pretty sure there's already better ways to play the rest of the games that are in this compilation. Just for fun, I've added 'Gold' to my version, since it's tradition to have confusing names when it comes to Street Fighter.
 
-## Contents
-
-| Folder | Description |
-|---|---|
-| `src/ro9/` | The game's logic, rewritten in C. One file per function |
-| `tools/roundtrip/` | The tooling that compiles the C, links a full game image, and proves it byte-identical |
-
 ## Information
 
 - As far as I know, Hyper Street Fighter Zero has only ever been released in the compilation called *Street Fighter Zero: Fighter's Generation*. It can be played on a PS2 emulator, but I figured it might be interesting to build a native PC version.
@@ -16,6 +9,13 @@ Reverse-engineering the hidden game **Hyper Street Fighter Zero** that ships ins
 ## Status
 
 - About 50% of the game is done, full-image verified byte-exact. Remaining: the rest of the function pool, then a hardware-abstraction layer to run it natively on a PC. Testing on only Windows 11 for now, but I want to look into Linux later (especially Batocera).
+
+## Contents
+
+| Folder | Description |
+|---|---|
+| `src/ro9/` | The game's logic, rewritten in C. One file per function |
+| `tools/roundtrip/` | The tooling that compiles the C, links a full game image, and proves it byte-identical |
 
 ## Possible Additions
 
