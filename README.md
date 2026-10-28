@@ -24,4 +24,4 @@ Reverse-engineering the hidden game **Hyper Street Fighter Zero** that ships ins
   
 ## Legal note
 
-This repository contains **no game code, art, music, or data** from the original disc — only newly written C code and tools. This is an unofficial preservation project. It's not affiliated with or endorsed by Capcom, Sony, or PlayStation. To build or use it, you must own the original game disc and extract the data from it yourself. If I have time later, I'll explain how to do this, or link to a guide.
+This repository contains **no game code, art, music, or data** from the original disc, only newly written C code and tools. This is an unofficial preservation project. It's not affiliated with or endorsed by Capcom, Sony, or PlayStation. To build or use it, you must own the original game disc and extract the data from it yourself. If I have time later, I'll explain how to do this, or link to a guide.
