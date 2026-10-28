@@ -20,7 +20,7 @@ Reverse-engineering the hidden game **Hyper Street Fighter Zero** that ships ins
 ## Possible Additions
 
 - INCOMPLETE; Extra stages from older Street Fighter Zero games.
-- Online versus support
+- INCOMPLETE; Online versus support
   
 ## Legal note
 
