@@ -8,7 +8,7 @@ Reverse-engineering the hidden game **Hyper Street Fighter Zero** that ships ins
 
 ## Status
 
-- About 50% of the game is done, full-image verified byte-exact. Remaining: the rest of the function pool, then a hardware-abstraction layer to run it natively on a PC. Testing on only Windows 11 for now, but I want to look into Linux later (especially Batocera).
+- About 69% of the game is done, full-image verified byte-exact. Remaining: the rest of the function pool, then a hardware-abstraction layer to run it natively on a PC. Testing on only Windows 11 for now, but I want to look into Linux later (especially Batocera).
 
 ## Contents
 
