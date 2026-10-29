@@ -1,6 +1,6 @@
 # Hyper Street Fighter Zero Gold
 
-Reverse-engineering the hidden game **Hyper Street Fighter Zero** that ships inside the PlayStation 2 disc *Street Fighter Zero: Fighter's Generation* (Japan). I might stop there, since I'm pretty sure there's already better ways to play the rest of the games that are in this compilation. Just for fun, I've added 'Gold' to my version, since it's tradition to have confusing names when it comes to Street Fighter.
+Reverse-engineering the hidden game **Hyper Street Fighter Zero** that ships inside the PlayStation 2 disc *Street Fighter Zero: Fighter's Generation* (Japan). I might stop there, since I'm pretty sure there's already better ways to play the rest of the games that are in this compilation. Just for fun, I've added 'Gold' to my version, since it's tradition to have confusing names when it comes to Street Fighter. Also because I plan on adding extras later, such as back-ported stages.
 
 ## Information
 
